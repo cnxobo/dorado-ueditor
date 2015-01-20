@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:d="http://www.bstek.com/dorado/schema"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.bstek.com/dorado/schema http://www.bstek.com/dorado/schema/spring-dorado-7.0.xsd">
+
+	<bean parent="dorado.resolverRegister">
+		<property name="url" value="/dorado/ueditor/imageupload" />
+		<property name="resolver">
+			<bean class="com.bstek.dorado.ueditor.resolver.ImageUploadResolver">
+				<property name="savePath" value="ueditorupload/image" />
+				<property name="diskFileDownloadUrl" value="/dorado/ueditor/imagedownload" />
+				<property name="allowedExtensions" value="jpg|gif|jpeg|png|bmp" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean parent="dorado.resolverRegister">
+		<property name="url" value="/dorado/ueditor/imagedownload" />
+		<property name="resolver">
+			<bean class="com.bstek.dorado.ueditor.resolver.FileDownloadResolver">
+				<property name="savePath" value="ueditorupload/image" />				
+			</bean>
+		</property>
+	</bean>
+	
+	<bean parent="dorado.resolverRegister">
+		<property name="url" value="/dorado/ueditor/fileupload" />
+		<property name="resolver">
+			<bean class="com.bstek.dorado.ueditor.resolver.FileUploadResolver">
+				<property name="savePath" value="ueditorupload/file" />
+				<property name="diskFileDownloadUrl" value="/dorado/ueditor/filedownload" />				
+				<property name="allowedExtensions" value="rar|doc|docx|zip|pdf|txt|swf|wmv|mp4|avi" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean parent="dorado.resolverRegister">
+		<property name="url" value="/dorado/ueditor/filedownload" />
+		<property name="resolver">
+			<bean class="com.bstek.dorado.ueditor.resolver.FileDownloadResolver">
+				<property name="savePath" value="ueditorupload/file" />				
+			</bean>
+		</property>
+	</bean>
+	
+	<bean parent="dorado.resolverRegister">
+		<property name="url" value="/dorado/ueditor/scrawupload" />
+		<property name="resolver">
+			<bean class="com.bstek.dorado.ueditor.resolver.ScrawUploadResolver">
+				<property name="savePath" value="ueditorupload/image" />
+				<property name="diskFileDownloadUrl" value="/dorado/ueditor/scrawdownload" />
+				<property name="allowedExtensions" value="jpg|gif|jpeg|png|bmp" />
+			</bean>
+		</property>
+	</bean>	
+	
+	<bean parent="dorado.resolverRegister">
+		<property name="url" value="/dorado/ueditor/scrawdownload" />
+		<property name="resolver">
+			<bean class="com.bstek.dorado.ueditor.resolver.FileDownloadResolver">
+				<property name="savePath" value="ueditorupload/image" />				
+			</bean>
+		</property>
+	</bean>
+	
+	<bean parent="dorado.resolverRegister">
+		<property name="url" value="/dorado/ueditor/imagemanager" />
+		<property name="resolver">
+			<bean class="com.bstek.dorado.ueditor.resolver.ImageManagerResolver">
+				<property name="imagePath" value="ueditorupload/image" />
+				<property name="diskFileDownloadUrl" value="/dorado/ueditor/imagedownload" />				
+			</bean>
+		</property>
+	</bean>	
+	
+	<bean parent="dorado.resolverRegister">
+		<property name="url" value="/dorado/ueditor/getremoteimage" />
+		<property name="resolver">
+			<bean class="com.bstek.dorado.ueditor.resolver.RemoteImageResolver">
+				<property name="savePath" value="ueditorupload/image" />
+				<property name="diskFileDownloadUrl" value="/dorado/ueditor/remoteimagedownload" />				
+			</bean>
+		</property>
+	</bean>	
+	
+	<bean parent="dorado.resolverRegister">
+		<property name="url" value="/dorado/ueditor/remoteimagedownload" />
+		<property name="resolver">
+			<bean class="com.bstek.dorado.ueditor.resolver.FileDownloadResolver">
+				<property name="savePath" value="ueditorupload/image" />				
+			</bean>
+		</property>
+	</bean>
+	
+	<bean parent="dorado.resolverRegister">
+		<property name="url" value="/dorado/ueditor/getmovie" />
+		<property name="resolver">
+			<bean class="com.bstek.dorado.ueditor.resolver.MovieResolver">				
+			</bean>
+		</property>
+	</bean>
+	
+</beans>

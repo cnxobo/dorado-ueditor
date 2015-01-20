@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.2
+Created-By: 1.6.0_65-b14-466.1-11M4716 (Apple Inc.)
+Implementation-Title: dorado-ueditor
+Implementation-Vendor: www.BSTEK.com
+Implementation-Version: 1.0.4.141231.1418
+

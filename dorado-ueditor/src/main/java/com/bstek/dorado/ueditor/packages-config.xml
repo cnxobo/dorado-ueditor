@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<Packages>
+		<Package name="u-editor-skin" pattern="dorado-css">
+			skins/~current/u-editor
+		</Package>
+		<Package name="u-editor" pattern="dorado-js" depends="base-widget,u-editor-skin">
+			scripts/dorado/u-editor
+		</Package>
+	</Packages>
+</config>
